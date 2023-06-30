@@ -38,6 +38,8 @@
             label3 = new Label();
             txtTarjeta = new TextBox();
             label4 = new Label();
+            btnVer = new Button();
+            btnActualizar = new Button();
             SuspendLayout();
             // 
             // listClientes
@@ -64,6 +66,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Desktop;
             label2.Location = new Point(274, 82);
             label2.Name = "label2";
             label2.Size = new Size(64, 19);
@@ -80,8 +83,8 @@
             // btnAgregar
             // 
             btnAgregar.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAgregar.ForeColor = SystemColors.Highlight;
-            btnAgregar.Location = new Point(334, 286);
+            btnAgregar.ForeColor = Color.Green;
+            btnAgregar.Location = new Point(332, 257);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(138, 30);
             btnAgregar.TabIndex = 4;
@@ -93,7 +96,7 @@
             // 
             btnEliminar.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnEliminar.ForeColor = Color.Firebrick;
-            btnEliminar.Location = new Point(30, 338);
+            btnEliminar.Location = new Point(437, 314);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(138, 30);
             btnEliminar.TabIndex = 5;
@@ -112,6 +115,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Desktop;
             label3.Location = new Point(274, 133);
             label3.Name = "label3";
             label3.Size = new Size(70, 19);
@@ -129,17 +133,44 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Desktop;
             label4.Location = new Point(274, 185);
             label4.Name = "label4";
             label4.Size = new Size(135, 19);
             label4.TabIndex = 8;
             label4.Text = "Tarjeta de Crédito:";
             // 
+            // btnVer
+            // 
+            btnVer.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVer.ForeColor = Color.DodgerBlue;
+            btnVer.Location = new Point(237, 314);
+            btnVer.Name = "btnVer";
+            btnVer.Size = new Size(138, 30);
+            btnVer.TabIndex = 10;
+            btnVer.Text = "Ver Cliente";
+            btnVer.UseVisualStyleBackColor = true;
+            btnVer.Click += btnVer_Click;
+            // 
+            // btnActualizar
+            // 
+            btnActualizar.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnActualizar.ForeColor = Color.DodgerBlue;
+            btnActualizar.Location = new Point(225, 314);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(160, 30);
+            btnActualizar.TabIndex = 11;
+            btnActualizar.Text = "Actualizar Cliente";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
+            // 
             // GestionUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(604, 392);
+            Controls.Add(btnActualizar);
+            Controls.Add(btnVer);
             Controls.Add(txtTarjeta);
             Controls.Add(label4);
             Controls.Add(txtTelefono);
@@ -150,6 +181,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(listClientes);
+            ForeColor = SystemColors.Highlight;
             Name = "GestionUsuarios";
             Text = "Usuarios";
             Load += GestionUsuarios_Load;
@@ -169,5 +201,7 @@
         private Label label3;
         private TextBox txtTarjeta;
         private Label label4;
+        private Button btnVer;
+        private Button btnActualizar;
     }
 }

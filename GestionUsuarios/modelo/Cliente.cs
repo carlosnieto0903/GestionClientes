@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestionUsuarios
+namespace GestionUsuarios.modelos
 {
     internal class Cliente
     {
 
         public string Nombre
         {
-            get ; set ; 
+            get; set;
         }
         public string Telefono
         {
@@ -22,6 +22,10 @@ namespace GestionUsuarios
             get; set;
         }
 
+        public string Id
+        {
+            get; set;
+        }
         public override string ToString()
         {
             return Nombre;
